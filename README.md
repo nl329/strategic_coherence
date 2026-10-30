@@ -57,7 +57,7 @@ Ten CSV rows × three components × five runs means **150 API calls**. The compo
 
 ## Publish a browser-accessible version
 
-The repository is prepared for GitHub Pages: `index.html` is the entry point and `.nojekyll` disables Jekyll processing. Publishing is optional; the local file works independently.
+The repository is prepared for GitHub Pages: `prototype.html` is the entry point and `.nojekyll` disables Jekyll processing. Publishing is optional; the local file works independently.
 
 See [GitHub setup and publication instructions](docs/GITHUB_SETUP.md). No API key should be added to the repository, GitHub Pages settings, or an Actions workflow: users enter their own key in the app.
 
@@ -75,7 +75,7 @@ node --test tests/portable.test.cjs
 
 ## Repository contents
 
-- `index.html` — application; no build step.
+- `prototype.html` — application; no build step.
 - `docs/USER_GUIDE.md` — instructions, exact prompts, model settings, and limitations.
 - `docs/GITHUB_SETUP.md` — upload, Pages, and release instructions.
 - `examples/sample-input.csv` — fictional example inputs.
