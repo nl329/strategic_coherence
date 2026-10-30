@@ -7,7 +7,7 @@ A portable browser application for assessing the alignment and reasoning quality
 ## Get started
 
 1. Download this repository as a ZIP and extract it.
-2. Open `index.html` in a modern browser.
+2. Open `prototype.html` in a modern browser.
 3. Enter your API key in **Connection settings**.
 4. Select scoring categories, add a response and (for alignment) a strategic objective, and click the scoring button.
 5. **Download your results before refreshing or closing the tab.**
