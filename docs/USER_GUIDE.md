@@ -116,8 +116,6 @@ OBJECTIVE: [objective text]
 RESPONSE: [response text]
 ```
 
-Exported prompt version: `alignment-objective-2026-10-28`.
-
 ### Logical reasoning
 
 Instructions:
@@ -133,8 +131,6 @@ On a scale of 1-5, how logical is the response? (1= response is illogical, 3= re
 
 [response text]
 ```
-
-Exported prompt version: `logical-notebook-v1`.
 
 ### Convincing reasoning
 
@@ -181,17 +177,7 @@ Text that could be interpreted as a spreadsheet formula is prefixed with an apos
 
 Only submit material you are authorized to send to the API provider. This portable edition has no application-level spending cap; use the displayed call count and your API account controls to manage usage.
 
-## 9. Editing and sharing
-
-Use **Edit page text** to change headings, labels, instructions, and placeholders. **Save changes** applies the wording and attempts to preserve it in this browser. Local-file storage behavior varies across browsers.
-
-Use **Download edited HTML** after saving to create a shareable copy containing the edited wording. This download excludes the current API key and assessment results. Page-text editing does not change scoring prompts or the composite formula.
-
-The built-in **Restore defaults** option loads the template wording, which can differ from your saved edits. Cancel if you do not want those defaults, or edit and save the wording you prefer.
-
-To share, distribute the HTML and this README together, optionally in a ZIP. Recipients enter their own API key. Archive the exact HTML version used for a study; later model or prompt changes should be documented as a new release.
-
-## 10. Interpretation, reproducibility, and verification
+## 9. Interpretation, reproducibility, and verification
 
 Scores are model-based judgments, not validated predictions of company performance. A logical or convincing response need not explain how a choice advances the stated objective. Low alignment may reflect an absent explicit connection rather than strategic incompatibility. The convincing measure concerns changes in belief about company success, not solely the formal quality of an argument.
 
@@ -199,7 +185,7 @@ Repeated ratings may differ. The model identifier is not a pinned snapshot, and 
 
 At the time this README was prepared, automated checks with simulated API responses had verified request settings, response parsing, score aggregation, composite calculation, CSV processing, and incomplete-response rejection. Live scoring with a real API key and exhaustive browser compatibility had not been verified in this session.
 
-## 11. Troubleshooting
+## 10. Troubleshooting
 
 - **Key rejected:** check that the entered value is an API key and that the account permits API use.
 - **Model unavailable:** verify account access to the requested model. The app does not silently substitute another model.
@@ -208,7 +194,3 @@ At the time this README was prepared, automated checks with simulated API respon
 - **Timeout or incomplete response:** no score is recorded for that component. A request may still have consumed billable tokens.
 - **CSV rejected:** check headers, topic values, quoting, row count, file size, and required objectives.
 - **Missing results after refresh:** results were held only in memory. Download before refreshing or closing.
-
-## 12. Archive metadata
-
-This README deliberately does not assign an author, institutional affiliation, DOI, or software license. Supply accurate creator and citation metadata when depositing the archive, and select a license appropriate to your rights and intended reuse. The documentation date above is not a declaration that the software has been publicly released.
