@@ -4,7 +4,7 @@
 
 Strategic Choice Observatory is a browser-based research tool for assessing the alignment and reasoning quality of strategic choices. It evaluates a written response using three separate LLM ratings: alignment with a stated objective, logical reasoning, and convincing reasoning. An optional composite combines these ratings.
 
-This README describes the accompanying `prototype.html` file. The file can be renamed `strategic-choice-observatory.html` without changing its behavior. No installation, Python, Jupyter, or hosted application server is required.
+This README describes the accompanying `prototype.html` file. No installation, Python, Jupyter, or hosted application server is required.
 
 ## 1. Requirements
 
