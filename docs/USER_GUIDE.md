@@ -98,8 +98,6 @@ All three component measures use the same model and effort setting. The composit
 
 ## 6. Exact scoring prompts
 
-The following text reflects the HTML implementation, rather than any later revision of the research notebooks. Bracketed placeholders below are replaced with the supplied input text. The alignment prompt intentionally preserves the notebook's lack of a space between `OBJECTIVE?` and `(1`.
-
 ### Alignment
 
 Instructions:
@@ -111,7 +109,7 @@ Return exactly one integer from 1 through 5. Make your best estimate even if inf
 Input:
 
 ```text
-On a scale of 1-5 (using the entire scale), to what extent is the RESPONSE aligned with the OBJECTIVE?(1 = not at all aligned, 3 = somewhat aligned, 5 = very aligned).
+On a scale of 1-5 (using the entire scale), to what extent is the RESPONSE aligned with the executive's OBJECTIVE?(1 = not at all aligned, 3 = somewhat aligned, 5 = very aligned).
 
 OBJECTIVE: [objective text]
 
