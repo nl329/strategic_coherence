@@ -35,7 +35,7 @@ API calls are billed to the account associated with the entered key. The archive
 | Logical reasoning | Response only | 1: illogical; 3: somewhat logical; 5: logical |
 | Convincing reasoning | Response only | 1: reduces belief in company success; 3: does not change belief; 5: increases belief |
 
-The company/reference label and topic are metadata; they do not enter the scoring prompts. Topics are markets, differentiation, organization (`org`), and culture.
+The company/reference label and topic are metadata; they do not enter the scoring prompts. Topics are markets, moat (differentiation), organization, and culture.
 
 For five-run mode, each component score is the arithmetic mean of five separately requested integer ratings. Individual ratings are retained. Displayed ranges describe variation across runs; they are not confidence intervals.
 
