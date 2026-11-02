@@ -31,7 +31,7 @@ test('all categories use Responses API and requested settings; composite adds no
  const composite=await run("api('/api/score',{...d,category:'composite',component_ids:results.map(r=>r.id)})");
  assert.equal(composite.score,3.75);assert.equal(composite.reasoning_score,3.5);assert.equal(calls.length,3);
  for(const {url,body} of calls){assert.equal(url,'https://api.openai.com/v1/responses');assert.equal(body.model,'gpt-5.6');assert.equal(body.reasoning.effort,'high');assert.equal(body.store,false);assert.equal(body.max_output_tokens,25000);assert(!('temperature' in body));}
- assert.equal(calls[0].body.input,'On a scale of 1-5 (using the entire scale), to what extent is the RESPONSE aligned with the OBJECTIVE?(1 = not at all aligned, 3 = somewhat aligned, 5 = very aligned).\n\nOBJECTIVE: Goal\n\nRESPONSE: Response');
+ assert.equal(calls[0].body.input,'On a scale of 1-5 (using the entire scale), to what extent is the RESPONSE aligned with the executive's OBJECTIVE?(1 = not at all aligned, 3 = somewhat aligned, 5 = very aligned).\n\nOBJECTIVE: Goal\n\nRESPONSE: Response');
  assert.equal((await run("api('/api/history')")).length,4);
  assert(run('portableCSV(portableHistory)').includes('component_ids'));
 });
