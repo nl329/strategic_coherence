@@ -2,7 +2,7 @@
 
 **How coherent are your strategic choices?**
 
-A portable browser application for assessing the alignment and reasoning quality of strategic choices. Evaluate a single response or upload a CSV, using your own OpenAI API key.
+A portable browser application for assessing the alignment and reasoning strength of strategic choices. Evaluate a single response or upload a CSV, using your own OpenAI API key.
 
 ## Get started
 
@@ -21,7 +21,7 @@ No installation, backend server, or software dependencies are needed to run the 
 | Alignment | Objective and response | How closely the response aligns with the objective |
 | Logical reasoning | Response | How logical the response is |
 | Convincing reasoning | Response | Whether the response increases belief in company success |
-| Composite | Three component scores | 50% alignment + 25% logical + 25% convincing |
+| Composite coherence | Three component scores | 50% alignment + 25% logical + 25% convincing |
 
 Component ratings range from 1 to 5. Choose one run or the mean of five runs per component. Selecting the composite includes all three components and adds no extra model call.
 
@@ -38,7 +38,7 @@ The app requests **`gpt-5.6` with high reasoning effort** through the OpenAI Res
 
 ## Example CSV
 
-Use [examples/sample-input.csv](examples/sample-input.csv), which contains fictional examples and no interview data. Required columns are `topic` and `response`; `objective` is also required for alignment/composite scoring. `company` is optional. The aliases `companyid` and `q` are supported.
+Use [examples/sample-input.csv](examples/sample-input.csv), which contains fictional examples and no interview data. Required columns are `topic` and `response`; `objective` is also required for alignment/composite scoring. `company` is optional. 
 
 ```csv
 company,topic,objective,response
@@ -59,32 +59,11 @@ Ten CSV rows × three components × five runs means **150 API calls**. The compo
 
 The repository is prepared for GitHub Pages: `prototype.html` is the entry point and `.nojekyll` disables Jekyll processing. Publishing is optional; the local file works independently.
 
-See [GitHub setup and publication instructions](docs/GITHUB_SETUP.md). No API key should be added to the repository, GitHub Pages settings, or an Actions workflow: users enter their own key in the app.
-
-## Reproducibility and verification
-
-Archive the exact HTML release alongside inputs and exported results. The model is not a pinned snapshot; ratings may vary between runs and over time. These are model judgments, not validated predictions of company performance.
-
-Automated tests use simulated API responses and do not consume API credits. They cover model settings, prompt wording, CSV handling, the composite, and error handling. Live API scoring and comprehensive browser compatibility have not been verified for this repository package.
-
-For development only, install Node.js 22 or newer and run:
-
-```sh
-node --test tests/portable.test.cjs
-```
-
 ## Repository contents
 
 - `prototype.html` — application; no build step.
 - `docs/USER_GUIDE.md` — instructions, exact prompts, model settings, and limitations.
-- `docs/GITHUB_SETUP.md` — upload, Pages, and release instructions.
 - `examples/sample-input.csv` — fictional example inputs.
 - `tests/portable.test.cjs` — tests using a simulated API.
 - `.github/workflows/check.yml` — automated checks; does not deploy or call OpenAI.
 - `CHANGELOG.md`, `SECURITY.md`, `CONTRIBUTING.md` — maintenance notes.
-
-## License and citation
-
-A license has **not yet been selected**. This package does not grant an open-source license. The owner should choose and add a LICENSE file before inviting reuse under specific terms.
-
-Creator names, affiliations, repository URL, and DOI have deliberately not been invented. Once those are finalized, add citation metadata and include the release identifier in research citations. See the setup guide for archive preparation.
