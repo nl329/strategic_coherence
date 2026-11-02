@@ -61,9 +61,9 @@ Example company,markets,Serve small independent retailers,We focus sales on inde
 ```
 
 - `company`: optional reference; `companyid` is also accepted.
-- `topic`: required. Use `markets`, `differentiation`, `org`, or `culture`. `organization` is normalized to `org`; `moat` to `differentiation`.
+- `topic`: required. Use `markets`, `differentiation`, `org`, or `culture`.
 - `objective`: required for alignment or composite scoring; optional for reasoning-only scoring.
-- `response`: required; `q` is also accepted.
+- `response`: required.
 
 Use UTF-8 text and comma delimiters. Quote values containing commas or line breaks; escape a quotation mark inside a quoted field by doubling it. The interface accepts up to 100 data rows and files up to 2,000,000 bytes. Required objective/response fields are limited to 20,000 characters; company/reference labels to 200 characters. A template can be downloaded from the interface.
 
@@ -147,10 +147,6 @@ On a scale of 1-5, how does this response change your beliefs in the success of 
 
 [response text]
 ```
-
-Exported prompt version: `convincing-notebook-v1`.
-
-The logical and convincing prompts retain the earlier portable app wording. They are not the expanded system messages used in some later interview notebooks. The composite formula is labeled `composite-v1`.
 
 ## 7. Results and downloads
 
