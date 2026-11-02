@@ -66,4 +66,3 @@ The repository is prepared for GitHub Pages: `prototype.html` is the entry point
 - `examples/sample-input.csv` — fictional example inputs.
 - `tests/portable.test.cjs` — tests using a simulated API.
 - `.github/workflows/check.yml` — automated checks; does not deploy or call OpenAI.
-- `CHANGELOG.md`, `SECURITY.md`, `CONTRIBUTING.md` — maintenance notes.
